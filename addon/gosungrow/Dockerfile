@@ -39,7 +39,7 @@ LABEL \
   io.hass.arch="${BUILD_ARCH}" \
   io.hass.type="addon" \
   io.hass.version="${BUILD_VERSION}" \
-  org.opencontainers.image.source="https://github.com/roth-andreas/gosungrow-home-assistant"
+  org.opencontainers.image.source="https://github.com/bigjimlefou/gosungrow-home-assistant"
 
 ENV HOME=/data \
     GOSUNGROW_CONFIG=/data/.GoSungrow/config.json \

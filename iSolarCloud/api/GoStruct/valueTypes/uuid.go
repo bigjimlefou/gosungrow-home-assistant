@@ -2,15 +2,17 @@ package valueTypes
 
 import (
 	"encoding/json"
-	"github.com/MickMake/GoUnify/Only"
 	"strconv"
+
+	"github.com/MickMake/GoUnify/Only"
 )
 
 type Uuid struct {
-	string `json:"string,omitempty"`
-	int64  `json:"integer,omitempty"`
-	Valid  bool  `json:"valid"`
-	Error  error `json:"-"`
+	string  `json:"string,omitempty"`
+	int64   `json:"integer,omitempty"`
+	Numeric bool  `json:"numeric,omitempty"`
+	Valid   bool  `json:"valid"`
+	Error   error `json:"-"`
 }
 
 // UnmarshalJSON - Convert JSON to value
@@ -77,6 +79,7 @@ func (t *Uuid) SetString(value string) Uuid {
 	for range Only.Once {
 		t.string = value
 		t.int64 = 0
+		t.Numeric = false
 		t.Valid = false
 
 		if value == "" {
@@ -87,6 +90,11 @@ func (t *Uuid) SetString(value string) Uuid {
 			// value = ""
 			break
 		}
+		// Handle JSON null literal
+		if value == "null" {
+			// This is a null value from JSON, treat as empty
+			break
+		}
 
 		var v int
 		v, t.Error = strconv.Atoi(t.string)
@@ -94,6 +102,7 @@ func (t *Uuid) SetString(value string) Uuid {
 			break
 		}
 		t.int64 = int64(v)
+		t.Numeric = true
 		t.Valid = true
 	}
 

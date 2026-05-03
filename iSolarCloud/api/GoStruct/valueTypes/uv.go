@@ -3,10 +3,11 @@ package valueTypes
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/MickMake/GoUnify/Only"
 	"sort"
 	"strconv"
 	"strings"
+
+	"github.com/MickMake/GoUnify/Only"
 )
 
 type UnitValue struct {
@@ -429,6 +430,12 @@ func (t *UnitValue) SetString(value string) UnitValue {
 
 		if value == "--" {
 			// -- Indicates a null or empty value.
+			t.Valid = false
+			break
+		}
+
+		// Handle JSON null literal
+		if value == "null" {
 			t.Valid = false
 			break
 		}

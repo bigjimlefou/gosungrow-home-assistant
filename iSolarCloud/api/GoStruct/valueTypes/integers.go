@@ -2,8 +2,9 @@ package valueTypes
 
 import (
 	"encoding/json"
-	"github.com/MickMake/GoUnify/Only"
 	"strconv"
+
+	"github.com/MickMake/GoUnify/Only"
 )
 
 type Integer struct {
@@ -96,6 +97,12 @@ func (t *Integer) SetString(value string) Integer {
 
 		if value == "--" {
 			// value = ""
+			break
+		}
+
+		// Handle JSON null literal
+		if value == "null" {
+			// This is a null value from JSON, treat as empty
 			break
 		}
 

@@ -17,7 +17,7 @@ For most users, that means installing and starting the `Mosquitto broker` app fi
 
 1. Open the Home Assistant App Store.
 2. Add this repository as a custom repository:
-   - `https://github.com/roth-andreas/gosungrow-home-assistant`
+   - `https://github.com/bigjimlefou/gosungrow-home-assistant`
 3. Refresh the App Store.
 4. Install `GoSungrow`.
 5. Enter your `gosungrow_user` and `gosungrow_password`.

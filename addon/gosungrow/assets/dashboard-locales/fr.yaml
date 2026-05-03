@@ -1,0 +1,34 @@
+dashboard:
+  view_overview: Aperçu
+  view_trends: Tendances
+  heading_live_flow: Flux en Direct
+  heading_today: Aujourd'hui
+  heading_power_balance: Bilan Énergétique
+  heading_battery: Batterie
+  heading_daily_energy: Énergie Quotidienne
+  heading_solar_allocation: Répartition Solaire
+  heading_load_sources: Sources de Consommation
+  heading_grid_exchange: Échange Réseau
+  heading_battery_flow: Flux de Batterie
+  heading_battery_soc: État de Charge Batterie
+  name_pv_yield: Production PV
+  name_pv_to_load: PV Vers Consommation
+  name_pv_to_battery: PV Vers Batterie
+  name_pv_to_grid: PV Vers Réseau
+  name_feed_in: Injection Réseau
+  name_grid_import: Import Réseau
+  name_grid_to_load: Réseau Vers Consommation
+  name_grid_net: Réseau Net
+  name_battery_soc: État de Charge
+  name_battery_power: Puissance Batterie
+  name_charge: Charge
+  name_discharge: Décharge
+  name_pv: PV
+  name_load: Consommation
+  name_grid: Réseau
+  name_battery: Batterie
+flow_card:
+  node_pv: PV
+  node_grid: Réseau
+  node_home: Maison
+  node_battery: Batterie

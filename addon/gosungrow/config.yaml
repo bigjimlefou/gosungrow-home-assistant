@@ -1,8 +1,8 @@
 name: GoSungrow
-version: 3.0.33
+version: 3.0.34
 slug: gosungrow
-url: https://github.com/roth-andreas/gosungrow-home-assistant
-image: ghcr.io/roth-andreas/gosungrow-addon-{arch}
+url: https://github.com/bigjimlefou/gosungrow-home-assistant
+image: ghcr.io/bigjimlefou/gosungrow-addon-{arch}
 description: Publish Sungrow iSolarCloud data to Home Assistant over MQTT discovery.
 panel_icon: mdi:solar-power
 startup: services
